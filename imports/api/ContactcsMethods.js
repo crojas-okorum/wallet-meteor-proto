@@ -6,6 +6,6 @@ Meteor.methods({
         if(!name){
             throw new Meteor.Error('Name is Requiered');
         }
-        return ContacsCollection.insert({name,email,imageUrl})
+        return ContacsCollection.insert({name,email,imageUrl,createdAt:new Date()})
     }
 })
