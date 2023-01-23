@@ -1,10 +1,10 @@
 import React, { useState,memo } from "react";
 import { ContacsCollection } from "../api/ContacsCollection";
-import {useTracker, useSubscribe, useFind} from 'meteor/react-meteor-data';
+import { useSubscribe, useFind} from 'meteor/react-meteor-data';
 import { SuccessAlert } from "./components/SuccessAlert";
 import { render } from "react-dom";
 export const ContactList = () => {
-  const isLoading = useSubscribe('contacts')
+  const isLoading = useSubscribe('contacta')
 
   const contacts = useFind(() => {
     return ContacsCollection.find({archived:{$ne:true}}, { sort: { createdAt: -1 }});

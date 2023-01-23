@@ -5,6 +5,6 @@ Meteor.publish('allContacts', function publishAllContatcs(){
     return ContacsCollection.find()
 })
 
-Meteor.publish('contacts', function publishAllContatcs(){
+Meteor.publish('contacta', function publishAllContatcs(){
     return ContacsCollection.find({archived:{$ne:true}})
 })
