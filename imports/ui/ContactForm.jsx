@@ -28,7 +28,7 @@ export const ContactForm=()=>{
     }
 
     const saveContact = () => {
-        //ContacsCollection.insert({name,email,imageUrl});
+       
         Meteor.call('contacts.insert',{name,email,imageUrl}, (errorResponse) => {
           if(errorResponse){
             showError({message:errorResponse.error})
